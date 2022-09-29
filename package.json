@@ -2,7 +2,6 @@
   "name": "calculo-da-ampulheta",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "dev": "ts-node-dev --transpile-only index.ts",
     "test": "jest"
