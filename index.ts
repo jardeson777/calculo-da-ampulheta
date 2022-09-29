@@ -1,7 +1,10 @@
 import Hourglass from './src/model/Hourglass';
 
-const hourglass = new Hourglass(20);
+const inputUser = 25;
 
-console.log(hourglass.getHourglass('top'));
-console.log(hourglass.getHourglass('bottom'));
+const hourglass1 = new Hourglass(inputUser);
+const hourglass2 = new Hourglass(inputUser);
+
+console.log(hourglass1.getHourglass('top'));
+console.log(hourglass2.getHourglass('bottom'));
 

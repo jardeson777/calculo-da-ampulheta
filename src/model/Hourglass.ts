@@ -40,6 +40,7 @@ class Hourglass {
             
             line =  this.lineHourglass(i, line, "#") ;
             this.hourglass += "#" + line + "#" + "\n";
+
             line = this.baselineHandle(this.valueInput-2, " ");
         }
     }
@@ -47,24 +48,15 @@ class Hourglass {
     private hourglassEmpty = (position: 'top' | 'bottom') => {
         let line = this.baselineHandle(this.valueInput-2, " ");
     
-        if(position === 'bottom') {
-            for (let i = this.middleHourglassCount; i > 0; i--){
-                line =  this.lineHourglass(i, line, "#");
-                this.hourglass += "#" + line + "#" + "\n";
-                
-                if(i == 1) {
-                    this.hourglass += this.baselineHandle(this.valueInput, "#") + "\n";
-                }
-                line = this.baselineHandle(this.valueInput-2, " ");
-            }
-            return;
-        }
-        for (let i = this.middleHourglassCount; i > 0; i--){
+        for (let i = this.middleHourglassCount; i >= 0; i--){
             line =  this.lineHourglass(i, line, "#");
             this.hourglass += "#" + line + "#" + "\n";
             
-            if(i == 1) {
+            if(i == 0) {
                 this.hourglass += this.baselineHandle(this.valueInput, "#") + "\n";
+            }
+            if(position === 'bottom') {
+                line = this.baselineHandle(this.valueInput-2, " ");
             }
         }
     }
