@@ -1,6 +1,6 @@
-import Hourglass from './src/model/Hourglass';
+import Hourglass from './src/model/Hourglass/Hourglass';
 
-const inputUser = 25;
+const inputUser = 20;
 
 const hourglass1 = new Hourglass(inputUser);
 const hourglass2 = new Hourglass(inputUser);

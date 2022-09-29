@@ -1,4 +1,4 @@
-import Utils from "./Utils";
+import Utils from "../Utils/Utils";
 
 class Hourglass {
     private hourglass: string = '';
@@ -6,6 +6,9 @@ class Hourglass {
     private middleHourglassCount: number;
 
     constructor (valueInput: number) {
+        if (valueInput < 20) {
+            throw new Error("Enter a value greater than 19");
+        };
         this.valueInput = valueInput;
         this.middleHourglassCount = Math.ceil(valueInput/2)-2;
     }
